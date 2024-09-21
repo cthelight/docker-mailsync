@@ -26,7 +26,7 @@ ENV SUPERCRONIC_URL=https://github.com/aptible/supercronic/releases/download/v0.
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN apt-get update
-RUN apt-get -y install ca-certificates isync curl
+RUN apt-get -y install ca-certificates isync curl gpg
 
 # Pull down supercronic
 RUN curl -fsSLO "$SUPERCRONIC_URL" \
